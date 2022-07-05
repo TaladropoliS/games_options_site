@@ -1,18 +1,23 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h2 class="py-2">Lista de Juegos disponible</h2>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/NavBar.vue'
+
+
+import {mapActions} from "vuex";
 
 export default {
   name: 'HomeView',
-  components: {
-    HelloWorld
+  components: {},
+  methods:{
+    ...mapActions(['llamarJuegos'])
+  },
+  created() {
+    this.llamarJuegos()
   }
 }
 </script>
