@@ -21,10 +21,10 @@
             </router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <router-link class="nav-link" to="administracion">
               <i class="fa-solid fa-users-gear"></i>
               Administración
-            </a>
+            </router-link>
           </li>
         </ul>
 

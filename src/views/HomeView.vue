@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h2 class="py-2"><i class="fa-solid fa-list"></i> Lista de Juegos disponible</h2>
+    <h2 class="py-2 mt-2"><i class="fa-solid fa-list"></i> Lista de Juegos disponible</h2>
     <GameCard
         :listaGames="listaGames"
     />
@@ -25,6 +25,6 @@
       })
       const listaGames = computed(() => store.state.listaGames)
       return {listaGames}
-    }
+      }
   }
 </script>

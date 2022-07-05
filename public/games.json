@@ -1,16 +1,44 @@
 [
-    {
-        "name": "Grand Theft Auto V",
-        "rating": 4.48,
-        "released": "2013-09-17",
-        "updated": "2020-09-23",
-        "background_image": "https://cdn.forbes.com.mx/2020/05/Grand-Theft-Auto-V-640x360.jpg"
-    },
-    {
-        "name": "Portal 2",
-        "rating": 4.62,
-        "released": "2011-04-18",
-        "updated": "2020-08-03",
-        "background_image": "https://pivigames.blog/wp-content/uploads/2018/07/portal-2-mac-2844-0-min.jpg"
-    }
+  {
+    "name": "Grand Theft Auto V",
+    "rating": 4.48,
+    "released": "2013-09-17",
+    "updated": "2020-09-23",
+    "background_image": "https://cdn.forbes.com.mx/2020/05/Grand-Theft-Auto-V-640x360.jpg"
+  },
+  {
+    "name": "Portal 2",
+    "rating": 4.62,
+    "released": "2011-04-18",
+    "updated": "2020-08-03",
+    "background_image": "https://pivigames.blog/wp-content/uploads/2018/07/portal-2-mac-2844-0-min.jpg"
+  },
+  {
+    "name": "The Witcher",
+    "rating": 4.71,
+    "released": "2009-05-20",
+    "updated": "2010-09-02",
+    "background_image": "https://i.blogs.es/5350b0/ftin491veaaa7eq/1366_2000.webp"
+  },
+  {
+    "name": "Final Fantasy VII",
+    "rating": 4.34,
+    "released": "2019-09-10",
+    "updated": "2021-02-05",
+    "background_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqPfoz1da6jPQvLUFEgdz0qCCPom7a2VpGKA&usqp=CAU"
+  },
+  {
+    "name": "Elden Ring",
+    "rating": 4.34,
+    "released": "2019-09-10",
+    "updated": "2021-02-05",
+    "background_image": "https://e00-us-marca.uecdn.es/assets/multimedia/imagenes/2022/03/26/16483264681954.jpg"
+  },
+  {
+    "name": "God Of War",
+    "rating": 4.90,
+    "released": "2022-01-01",
+    "updated": "2022-02-25",
+    "background_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2KvQTOmn7sRBft1YhBrBlcG9FlNcmNq6Mk3cIjcfpuND4fq_EZQqjTb7frX7HrxKPZJ0&usqp=CAU"
+  }
 ]

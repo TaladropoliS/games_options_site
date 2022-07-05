@@ -11,7 +11,17 @@ const routes = [
     path: '/opiniones',
     name: 'opiniones',
     component: () => import(/* webpackChunkName: "opiniones" */ '../views/OpinionesVue.vue')
-  }
+  },
+  {
+    path: '/administracion',
+    name: 'administracion',
+    component: () => import(/* webpackChunkName: "administracion" */ '../views/AdministracionVue.vue')
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'not-found',
+    component: () => import(/* webpackChunkName: "not-found" */ '../components/NotFound.vue')
+  },
 ]
 
 const router = createRouter({

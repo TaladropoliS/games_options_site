@@ -3,12 +3,21 @@ import {createStore} from 'vuex'
 export default createStore({
     state: {
         listaGames: [],
+        opiniones: [],
     },
     getters: {},
     mutations: {
         setGames(state, payload) {
             state.listaGames = payload
-            console.log(state.listaGames)
+        },
+        addOpinion(state, payload) {
+            // payload[indice, nombre, opinion]
+            // console.log(payload[0])
+            // console.log(payload[1])
+            // console.log(payload[2])
+
+            state.opiniones.push([payload[0], payload[1], payload[2]])
+            console.log(state.opiniones)
         }
     },
     actions: {
@@ -20,7 +29,7 @@ export default createStore({
             } catch (e) {
                 console.log(e)
             }
-        }
+        },
     },
     modules: {}
 })
