@@ -1,4 +1,4 @@
-# games_optinos_site
+# games_options_site
 
 ## Project setup
 ```
