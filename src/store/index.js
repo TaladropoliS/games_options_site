@@ -6,9 +6,9 @@ export default createStore({
     },
     getters: {},
     mutations: {
-        setGames(state, data) {
-            state.listaGames = data
-            console.log(data)
+        setGames(state, payload) {
+            state.listaGames = payload
+            console.log(state.listaGames)
         }
     },
     actions: {
