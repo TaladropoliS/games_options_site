@@ -36,16 +36,16 @@
             <div class="modal-body">
               <div class="mb-3 text-start">
                 <label for="nombre_usuario" class="form-label text-start">Nombre</label>
-                <input v-model="nombre" type="text" class="form-control" id="nombre_usuario" placeholder="nombre" required>
+                <input v-model.trim="nombre" type="text" class="form-control" id="nombre_usuario" placeholder="nombre" required>
               </div>
               <div class="mb-3 text-start">
                 <label for="opinion_usuario" class="form-label text-start">Opiniones</label>
-                <textarea v-model="opinion" class="form-control" id="opinion_usuario" rows="3" required></textarea>
+                <textarea v-model.trim="opinion" class="form-control" id="opinion_usuario" rows="3" required></textarea>
               </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <button @click.prevent="addOpinion(game.id, nombre, opinion)" type="button" data-bs-dismiss="modal"
+              <button @click="addOpinion(game.id, nombre, opinion)" type="button" data-bs-dismiss="modal"
                       class="btn btn-primary">Guardar
               </button>
             </div>

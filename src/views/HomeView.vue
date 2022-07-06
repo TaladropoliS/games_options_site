@@ -20,11 +20,14 @@
     },
     setup() {
       const store = useStore()
+      let n = 0
       onMounted(() => {
+        n = n + 1
+        console.log(n)
         store.dispatch('llamarJuegos')
       })
       const listaGames = computed(() => store.state.listaGames)
       return {listaGames}
-      }
+    }
   }
 </script>
