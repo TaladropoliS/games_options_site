@@ -9,14 +9,17 @@ export default createStore({
     mutations: {
         setGames(state, payload) {
             state.listaGames = payload
+            let id = {}
+            for (let i in state.listaGames) {
+                let idDate = Date.now() + parseInt(Math.random() * 1000000)
+                id = {id: idDate.toString()}
+                state.listaGames[i] = Object.assign(id, state.listaGames[i])
+            }
+            // console.log(state.listaGames)
         },
         addOpinion(state, payload) {
-            // payload[indice, nombre, opinion]
-            // console.log(payload[0])
-            // console.log(payload[1])
-            // console.log(payload[2])
-
-            state.opiniones.push([payload[0], payload[1], payload[2]])
+            // // payload[idGame, idOpinion, nombre, opinion]
+            state.opiniones.push(payload)
             console.log(state.opiniones)
         }
     },

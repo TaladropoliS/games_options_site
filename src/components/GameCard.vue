@@ -45,7 +45,8 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <button @click.prevent="addOpinion(index, nombre, opinion)" type="button" data-bs-dismiss="modal" class="btn btn-primary">Guardar
+              <button @click.prevent="addOpinion(game.id, nombre, opinion)" type="button" data-bs-dismiss="modal"
+                      class="btn btn-primary">Guardar
               </button>
             </div>
           </div>
@@ -66,6 +67,7 @@
         indice: '',
         nombre: '',
         opinion: '',
+        idDate: '',
         modal: false,
       }
     },
@@ -73,9 +75,12 @@
       toggleModal() {
         this.modal = !this.modal
       },
-      addOpinion(indice, nombre, opinion) {
-        this.$store.commit('addOpinion', [indice, nombre, opinion])
-        this.indice = ''
+      addOpinion(idGame, nombre, opinion) {
+        this.idOpinion = Date.now()+parseInt(Math.random()*1000000)
+        this.idOpinion = this.idOpinion.toString()
+        // console.log(this.idOpinion)
+        let payload = {idGame:idGame, idOpinion:this.idOpinion, nombre:nombre, opinion:opinion}
+        this.$store.commit('addOpinion', payload)
         this.nombre = ''
         this.opinion = ''
         this.toggleModal()
