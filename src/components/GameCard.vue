@@ -35,11 +35,12 @@
             </div>
             <div class="modal-body">
               <div class="mb-3 text-start">
-                <label for="nombre_usuario" class="form-label text-start">Nombre</label>
-                <input v-model.trim="nombre" type="text" class="form-control" id="nombre_usuario" placeholder="nombre" required>
+                <label for="nombre_usuario" class="form-label text-start">Nombre (requerido)</label>
+                <input v-model.trim="nombre" type="text" class="form-control" id="nombre_usuario" placeholder="nombre"
+                       required>
               </div>
               <div class="mb-3 text-start">
-                <label for="opinion_usuario" class="form-label text-start">Opiniones</label>
+                <label for="opinion_usuario" class="form-label text-start">Opiniones (requerido)</label>
                 <textarea v-model.trim="opinion" class="form-control" id="opinion_usuario" rows="3" required></textarea>
               </div>
             </div>
@@ -76,14 +77,16 @@
         this.modal = !this.modal
       },
       addOpinion(idGame, nombre, opinion) {
-        this.idOpinion = Date.now()+parseInt(Math.random()*1000000)
-        this.idOpinion = this.idOpinion.toString()
-        // console.log(this.idOpinion)
-        let payload = {idGame:idGame, idOpinion:this.idOpinion, nombre:nombre, opinion:opinion}
-        this.$store.commit('addOpinion', payload)
-        this.nombre = ''
-        this.opinion = ''
-        this.toggleModal()
+        if (nombre !== '' && opinion !== '') {
+          this.idOpinion = Date.now() + parseInt(Math.random() * 1000000)
+          this.idOpinion = this.idOpinion.toString()
+          // console.log(this.idOpinion)
+          let payload = {idGame: idGame, idOpinion: this.idOpinion, nombre: nombre, opinion: opinion}
+          this.$store.commit('addOpinion', payload)
+          this.nombre = ''
+          this.opinion = ''
+          this.toggleModal()
+        }
       },
     },
   }

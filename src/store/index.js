@@ -34,8 +34,12 @@ export default createStore({
             let nuevaOpinion = state.opiniones.find(e => (e.idOpinion === payload[0]))
             for (let i of state.opiniones) {
                 if (nuevaOpinion.idOpinion === i.idOpinion) {
-                    i.nombre = payload[1]
-                    i.opinion = payload[2]
+                    if (payload[1] !== '') {
+                        i.nombre = payload[1]
+                    }
+                    if (payload[2] !== '') {
+                        i.opinion = payload[2]
+                    }
                 }
             }
         },

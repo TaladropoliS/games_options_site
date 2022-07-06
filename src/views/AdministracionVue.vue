@@ -106,13 +106,12 @@
         this.$store.commit('removeOpinion', idOpinion)
       },
       editOpinion(idOpinion, nuevoNombre, nuevaOpinion) {
-        if (nuevoNombre !== '' && nuevaOpinion !== '') {
-          this.$store.commit('editOpinion', [idOpinion, nuevoNombre, nuevaOpinion])
-          this.nuevoNombre = ''
-          this.nuevaOpinion = ''
-          this.toggleModal()
-        }
-
+        // if (nuevoNombre !== '' && nuevaOpinion !== '') {
+        this.$store.commit('editOpinion', [idOpinion, nuevoNombre, nuevaOpinion])
+        this.nuevoNombre = ''
+        this.nuevaOpinion = ''
+        this.toggleModal()
+        // }
       },
     },
     setup() {
