@@ -15,14 +15,14 @@
             <div class="accordion-item">
 
               <h2 class="accordion-header" :id="`headingOne${opinion.idOpinion}`">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         :data-bs-target="`#collapseOne${opinion.idOpinion}`"
                         aria-expanded="true" aria-controls="collapseOne">
                   <span>Opinion de: <b>{{ opinion.nombre }}</b></span>&nbsp;para el JUEGO&nbsp;<b>{{ game.name }}</b>
                 </button>
               </h2>
 
-              <div :id="`collapseOne${opinion.idOpinion}`" class="accordion-collapse collapse show"
+              <div :id="`collapseOne${opinion.idOpinion}`" class="accordion-collapse collapse"
                    :aria-labelledby="`headingOne${opinion.idOpinion}`"
                    data-bs-parent="accordion">
                 <div class="accordion-body text-start">
@@ -51,8 +51,8 @@
       const store = useStore()
       const opiniones = computed(() => store.state.opiniones)
       const listaGames = computed(() => store.state.listaGames)
-      console.log(opiniones.value.length)
-      console.log(opiniones.value)
+      // console.log(opiniones.value.length)
+      // console.log(opiniones.value)
       return {listaGames, opiniones}
     }
   }

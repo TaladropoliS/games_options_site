@@ -23,7 +23,7 @@
       let n = 0
       onMounted(() => {
         n = n + 1
-        console.log(n)
+        // console.log(n)
         store.dispatch('llamarJuegos')
       })
       const listaGames = computed(() => store.state.listaGames)

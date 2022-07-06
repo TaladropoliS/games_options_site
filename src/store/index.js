@@ -18,17 +18,18 @@ export default createStore({
                     state.listaGames[i] = Object.assign(id, state.listaGames[i])
                 }
             }
-            console.log(state.listaGames)
+            // console.log(state.listaGames)
         },
         addOpinion(state, payload) {
-            // // payload[idGame, idOpinion, nombre, opinion]
+            // payload trae un objeto, por eso se hace un push a la lista de opiniones
+            // payload = {idGame: idGame, idOpinion: idOpinion, nombre: nombre, opinion: opinion}
             state.opiniones.push(payload)
-            console.log(state.opiniones)
+            // console.log(state.opiniones)
         },
         removeOpinion(state, payload) {
             state.opiniones = state.opiniones.filter(e => (e.idOpinion !== payload))
-            console.log(payload)
-            console.log(state.opiniones)
+            // console.log(payload)
+            // console.log(state.opiniones)
         },
         editOpinion(state, payload) {
             let nuevaOpinion = state.opiniones.find(e => (e.idOpinion === payload[0]))
@@ -54,22 +55,6 @@ export default createStore({
                 console.log(e)
             }
         },
-        // cargarLocalStorageGames({commit}) {
-        //     if (localStorage.getItem('localListaGames')) {
-        //         const localListaGames = JSON.parse(localStorage.getItem('localListaGames'))
-        //         commit('cargarJuegos', localListaGames)
-        //         return
-        //     }
-        //     localStorage.setItem('localListaGames', JSON.stringify([]))
-        // },
-        // cargarLocalStorageOpiniones({commit}) {
-        //     if (localStorage.getItem('localOpiniones')) {
-        //         const localOpiniones = JSON.parse(localStorage.getItem('localOpiniones'))
-        //         commit('cargarOpiniones', localOpiniones)
-        //         return
-        //     }
-        //     localStorage.setItem('localOpiniones', JSON.stringify([]))
-        // },
     },
     modules: {}
 })
